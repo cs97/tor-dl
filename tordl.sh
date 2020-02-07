@@ -7,6 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 if [ $1 == 'install' ]; then
+  apt update
   apt install youtube-dl
   exit
 fi
