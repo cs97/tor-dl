@@ -1,2 +1,2 @@
 # tor-yt-dl
-tor youtube-dl
+Tails/Tor viedo Downloader
