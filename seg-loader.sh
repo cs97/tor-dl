@@ -17,11 +17,11 @@ for ((i=1;i<=range;i++))
 do
 	s=$(echo $address | sed s/$segID+"1"/$segID$i/g)
 	echo "download $i of $range"
-	wget -qO - ""$s"" >> tmp/part$i.mpg
+	wget -qO - ""$s"" >> tmp/part$i.part
 done
 
 
 for ((i=1;i<=range;i++))
 do
-	cat tmp/part$i.mpg >> $1.mpg
+	cat tmp/part$i.part >> $1
 done
