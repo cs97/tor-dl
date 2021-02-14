@@ -12,14 +12,12 @@ segID=$2
 range=$3
 address="$4"
 
-
 for ((i=1;i<=range;i++))
 do
 	s=$(echo $address | sed s/$segID+"1"/$segID$i/g)
 	echo "download $i of $range"
 	wget -qO - ""$s"" >> tmp/part$i.part
 done
-
 
 for ((i=1;i<=range;i++))
 do
